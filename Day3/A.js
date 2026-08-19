@@ -85,3 +85,15 @@ let date = new Date();
 console.log("Current Date: " + date);
 //getFullYear
 console.log("Current Year: " + date.getFullYear());
+//all math functions
+console.log("Math.PI: " + Math.PI);
+console.log("Math.round(4.7): " + Math.round(4.7));
+console.log("Math.floor(4.7): " + Math.floor(4.7));
+console.log("Math.ceil(4.7): " + Math.ceil(4.7));
+console.log("Math.max(1, 2, 3): " + Math.max(1, 2, 3));
+console.log("Math.min(1, 2, 3): " + Math.min(1, 2, 3));
+console.log("Math.random(): " + Math.random());
+console.log("Math.sqrt(16): " + Math.sqrt(16));
+console.log("Math.abs(-5): " + Math.abs(-5));
+console.log("Math.pow(2, 3): " + Math.pow(2, 3));
+
