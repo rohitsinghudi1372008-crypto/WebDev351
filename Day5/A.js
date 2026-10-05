@@ -49,26 +49,76 @@
 
 
 
-class university{
-    roll=0;name="";mark=0;
-    constructor(roll,name,mark){
-        this.roll=roll
-        this.name=name
-        this.mark=mark
+// class university{
+//     roll=0;name="";mark=0;
+//     constructor(roll,name,mark){
+//         this.roll=roll
+//         this.name=name
+//         this.mark=mark
+//     }
+//     displayResult=()=>{
+//         console.log(`student ${this.name}`)
+//         console.log(`Roll no ${this.roll}`)
+//         if(this.mark>60)
+//             console.log("Pass")
+//         else
+//             console.log("Fail")
+//     }
+//     show=()=>{
+//         console.log(`Students are ${university.count}`)
+//     }
+// }
+// let obj1= new university(25,"Sarthak")
+// obj1.displayResult()
+// let obj2=new university(65,"Rohit")
+// obj2.displayResult()
+
+
+// class bankaccount{
+//     constructor(accno,accname,accbal){
+//         this.accno=accno
+//         this.accname=accname
+//         this.accbal=accbal
+
+//     }
+// }   
+
+
+//create a base class employee containing employee id, name, salary and a method to display the details. Create two derived classes, manager and developer, which inherit from the employee class. The manager class should have an additional property for department, while the developer class should have an additional property for programming language. Implement methods in both derived classes to display their specific details along with the inherited employee details.
+
+class Employee {
+    constructor(empId, name, salary) {
+        this.empId = empId;
+        this.name = name;
+        this.salary = salary;
     }
-    displayResult=()=>{
-        console.log(`student ${this.na}`)
-        console.log(`Roll no ${this.rol}`)
-        if(this.mark>60)
-            console.log("Pass")
-        else
-            console.log("Fail")
-    }
-    show=()=>{
-        console.log(`Students are ${university.count}`)
+    displayDetails() {
+        console.log("Employee ID:", this.empId);
+        console.log("Name:", this.name);
+        console.log("Salary:", this.salary);
     }
 }
-let obj1= new university(25,"Sarthak")
-obj1.displayResult()
-let obj2=new university(65,"Rohit")
-obj2.displayResult()
+
+class Manager extends Employee {
+    constructor(empId, name, salary, department) {
+        super(empId, name, salary);
+        this.department = department;
+    }
+    displayDetails() {
+        super.displayDetails();
+        console.log("Department:", this.department);
+    }
+}
+
+class Developer extends Employee {
+    constructor(empId, name, salary, programmingLanguage) {
+        super(empId, name, salary);
+        this.programmingLanguage = programmingLanguage;
+    }
+    displayDetails() {
+        super.displayDetails();
+        console.log("Programming Language:", this.programmingLanguage);
+    }
+}
+
+
